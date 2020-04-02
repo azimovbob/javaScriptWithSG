@@ -1,0 +1,10 @@
+.container{
+    width: auto;
+    height: fit-content;
+    background-color: grey;
+}
+
+.innerContainer{
+    display: grid;
+    justify-content: center;
+}
