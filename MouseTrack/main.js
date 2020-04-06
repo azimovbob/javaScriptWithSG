@@ -18,27 +18,30 @@ var tracking = false;
 // }
 
 
-document.getElementById("btnToggle").addEventListener("click", function(){
-    this.classList.remove("btn-success");
-    this.classList.add("btn-danger");
-    document.getElementById("stopBtnToggle").classList.remove("btn-danger");
-    document.getElementById("stopBtnToggle").classList.add("btn-success");
-    tracking = true;
-});
+// document.getElementById("trackingBox").addEventListener("mosemove", function(){
+//     // this.classList.remove("btn-success");
+//     // this.classList.add("btn-danger");
+//     // document.getElementById("stopBtnToggle").classList.remove("btn-danger");
+//     // document.getElementById("stopBtnToggle").classList.add("btn-success");
+//     tracking = !tracking;
+//     if(!tracking){
+//         mouseX.innerText = "Untracked";
+//         mouseY.innerText = "Untracked";
+//     }
+// });
 
-document.getElementById("stopBtnToggle").addEventListener("click", function(){
-    this.classList.remove("btn-success");
-    this.classList.add("btn-danger");
-    document.getElementById("btnToggle").classList.remove("btn-danger");
-    document.getElementById("btnToggle").classList.add("btn-success");
-    mouseX.innerText = "Untracked";
-    mouseY.innerText = "Untracked";
-    tracking = false;
-});
-
-document.addEventListener("mousemove", function(evt){
-    if(tracking){
+document.getElementById("trackingBox").addEventListener("mousemove", function(evt){
+    
         mouseX.innerText = evt.clientX;
         mouseY.innerText = evt.clientY;
-    }
+    
 });
+
+document.getElementById("container").addEventListener("mousemove", function(evt){
+    
+    mouseX.innerText = "Untracked";
+    mouseY.innerText = "Untracked";
+
+});
+
+
