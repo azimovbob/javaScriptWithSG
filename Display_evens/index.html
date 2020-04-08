@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE-ALONG: Display Mouse Position</title>
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1><strong>Sample</strong></h1>
+        <form name = "evenNums" class = "needs-validation" onsubmit="return validate();"
+        onreset="resetView();" novalidate>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="startingNum">Starting Number</label>
+                    <input id="startingNum" class="form-control" type="number" min="0" required>
+                    <div class="invalid-feedback">
+                        Starting number is required and must be a positive number.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="endingNum">Ending Number</label>
+                    <input id="endingNum" class="form-control" type="number" min="1" required>
+                    <div class="invalid-feedback">
+                        Ending number is required and must be a positive number.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="step">Step</label>
+                    <input id="step" class="form-control" type="number" min="1" required>
+                    <div class="invalid-feedback">
+                        Step number is required and must be a positive number.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col">
+                <button id="displayBtn" class="btn btn-primary">Display even numbers</button>
+                <button id="resetBtn" class="btn btn-danger">Reset</button>
+            </div>
+         </form>
+         <h6 id="mess">Here are the even numbers between <span id="stNum"></span> and <span id="enNum"></span> by <span id="spNum"></span>'s:</h6>
+         <h6 id="errorMess" style="display: none;">Press reset button and then Enter valid format</h6>
+         <div id="pHolder"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
